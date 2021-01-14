@@ -15,3 +15,7 @@ after_success:
   - echo "${SSH_KEY} | base64 --decode >/tmp/ssh_rsa
   - chmod 600 /tmp/ssh_rsa
   - ssh -o "StrictHostKeyChecking no" pi@${IPADDR} -i tmp/ssh_rsa "echo test > test.log"
+
+rvm:
+ - 2.2
+ - jruby
