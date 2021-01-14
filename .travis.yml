@@ -12,7 +12,8 @@ env:
 services:
   - docker
   
-#before_install:
+before_install:
+  - gem install rake
   #- docker image build -t ${IMGNAME} .
   
 after_success:
