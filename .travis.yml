@@ -10,9 +10,6 @@ services:
 #before_install:
   #- docker image build -t ${IMGNAME} .
   
-script:
-  -dig +short myip.opendns.com @resolver1.opendns.com
-  
 after_success:
   - docker login -u ${DHUB_USERNAME} -p ${DHUB_PASS}
   - echo "${SSH_KEY} | base64 --decode >/tmp/ssh_rsa
