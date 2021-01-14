@@ -14,6 +14,8 @@ services:
   
 before_install:
   - gem install rake
+  
+gemfile: gemfile
   #- docker image build -t ${IMGNAME} .
   
 after_success:
